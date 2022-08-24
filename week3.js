@@ -13,13 +13,18 @@ ages.push(100);
 
 //1. C) average age:
 
-var sum = 0;
-for(var i=0; i<ages.length; i++){
-    sum += ages[i];
-}
 
-var avg = sum/ages.length; 
-console.log(avg);
+function findAverage(array){
+    let sum1 = 0;
+    for (let i = 0; i< array.length; i++){
+        sum1 += array[i];
+    }
+    let avg = sum1/array.length;{
+        return avg;
+    }
+}
+console.log(findAverage(ages));
+
 
 //2. a) average length of name:
 
@@ -92,7 +97,7 @@ console.log(findSum(theArray));
 
 
 //10. average of all elements in an array
-let avg1 = 0;
+
 
 function findAverage(array){
     let sum1 = 0;
