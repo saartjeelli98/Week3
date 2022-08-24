@@ -35,17 +35,14 @@ console.log(average);
 
 // 2. b) concatenating names array
 
-for (let i=0; i<names.length; i++){
-    console.log(names.join(" "));
-}
+//names.for each ();
 
-/* let newName = " ";
+let newNames = " ";
     for (let i=0; i<names.length; i++){
-        newName += names[i] + " ";
+        newNames += names[i] + " ";
     }
 
-console.log(newName.trim()); -> because they are strings
-*/
+console.log(newNames.trim());
 
 //5. create nameLengths
 
@@ -56,12 +53,10 @@ console.log(nameLengths);
 
 //6. sum of nameLengths
 
-for (let i=0; i<nameLengths.length; i++){
-    let sum= nameLengths.reduce(function(accumulator, currentValue){
-        return accumulator + currentValue;
-    });
-}
-console.log(sum);
+let total = 0;
+nameLengths.forEach(item => total += item);
+
+console.log(total);
 
 //7. print word n times
 
@@ -81,58 +76,43 @@ console.log(fullName("Barack", "Obama"));
 
 //9. return true if sum of numbers > 100
 
-let myArray = [1, 34, 76, 23, 78];
-let sum5 = 0;
+let theArray = [1, 34, 56, 12, 78, 34];
 
-function findSum(){
-    for (let i = 0; i < myArray.length; i++){
-        sum5 += myArray[i];
-        } if (sum5 > 100){
-            return "True";
+function findSum(array){
+    let sum = 0;
+    for (let i = 0; i < array.length; i++){
+        sum += array[i];
+        } if (sum > 100){
+            return true;
+        } else (sum < 100);{
+            return false;
         }
 }
-console.log(findSum());
+console.log(findSum(theArray));
 
 
 //10. average of all elements in an array
 let avg1 = 0;
-let sum1 = 0;
 
-function findAverage(){
-    for (let i = 0; i< myArray.length; i++){
-        sum1 += myArray[i];
+function findAverage(array){
+    let sum1 = 0;
+    for (let i = 0; i< array.length; i++){
+        sum1 += array[i];
     }
-    let avg1 = sum1/myArray.length;{
+    let avg1 = sum1/array.length;{
         return avg1;
     }
 }
-console.log(findAverage());
+console.log(findAverage(theArray));
 
-//11.
+//11. if an array if larger than another, print true
+let arr1 = [45, 23, 89, 344, 23, 78];
+let arr2 = [67, 23, 45, 12, 77, 34];
 
-let array1 = [45, 23, 89, 344, 23, 78];
-let array2 = [67, 23, 45, 12, 77, 34];
-
-let sum2 = 0;
-let sum3 = 0;
-let avg3 = 0;
-let avg4 = 0;
-
-function compareArrays(){
-    for (let i=0; i<array1.length; i++){
-        sum2 += array1[i];
-    } avg3 = sum2 / array1.length;
-    for (let i=0; i<array2.length; i++){
-        sum3 += array2[i];
-    } avg4 = sum3 / array2.length;
-    if ( avg3 > avg4){
-        return "True";
-    } else{
-        return "False";
-    }
+function compareArrays(array1, array2){
+    return (findAverage(array1) > findAverage(array2));
 }
-
-console.log(compareArrays())
+console.log(compareArrays(arr1, arr2));
 
 //12. 
 
@@ -141,13 +121,13 @@ let moneyInPocket = 9;
 
 function willBuyDrink(isHotOutside, moneyInPocket){
     if(isHotOutside == true && moneyInPocket > 10.50){
-    return "True";
+    return true;
     } else{
-        return "False";
+        return false;
     }
 }
 
-console.log(willBuyDrink(isHotOutside, moneyInPocket));
+console.log(willBuyDrink(true, 9));
 
 //13. 
 
