@@ -30,13 +30,8 @@ console.log(findAverage(ages));
 
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
 
-var sum = 0;
-for(var i=0; i<names.length; i++){
-    sum+=names[i].length;
-}
-var average = sum/names.length;
 
-console.log(average);
+console.log(findAverage(names));
 
 // 2. b) concatenating names array
 
